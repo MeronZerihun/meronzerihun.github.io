@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Meron Zerihun Demissie | Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo" style="background:url(images/profile.jpg); background-size: cover;">
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Meron Zerihun Demissie</h1>
+								<p>
+									Welcome! My name is Meron Zerihun Demissie and I am a Ph.D. student <br />studying Computer Science and Engineering <br />at the University of Michigan. <br /> <br />
+									My research primarily focuses on identifying vulnerabilities <br />in secure systems and designing architecture <br />for efficient private computing.
+								</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#research">Research</a></li>
+								<li><a href="#CV">CV</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<p> My name is Meron Zerihun Demissie. I was born and raised in Addis Ababa, Ethiopia. Currently, I am pursuing my Ph.D. in Computer Science and Engineering at the University of Michigan. I am advised by Prof. Todd Austin. My research focuses on identifying vulnerabilities in secure systems and designing computer systems for private and verifiable computing.</p> 
+								<p>I earned a Bachelor&#39;s degree in Software Engineering from Addis Ababa University&#39;s Institute of Technology.  During my undergraduate studies, I did a research internship where I worked in a team on a project called <a href="https://youtu.be/uqh3WBmSZ8I">Privacy Enhanced Computer Architecture</a>, which continues to inspire my current scholarly pursuit.</p> 
+								<p>To learn more about my academic work and other activities, feel free to explore this website and don&#39;t hesitate to <a href="#contact">contact</a> me.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="research">
+								<h2 class="major">Research</h2>
+								<h3>On-going</h3>
+								<p class="paper-title">Exploring Language-based Side Channels | M. Zerihun Demissie, T. Austin.</p>
+								<div class="paper-container">
+									<p class="paper-content"> 
+										Language-based side channels are vulnerabilities that arise from how a language is semantically defined. C++ and many other languages 
+										use short-circuiting in their implementation of logical operators for optimizing code and avoiding exceptions. If these operators are 
+										used on some private data within a program, the instruction and memory trace can be variable depending on this private data. This behavior 
+										causes an observable side-channel that can be exploited by an attacker running on the same system. This work seeks to identify real-world 
+										applications where such side channels exist.
+									</p>
+								</div>
+								<p class="paper-title">Exploring the Efficiency of Data Oblivious Programs &nbsp;&nbsp;|&nbsp;&nbsp; L. Biernacki, M. Zerihun Demissie, B. Mengist Tiruye, F. Assamnew Andargie, B. Reagen, T. Austin.</p>
+								<div class="paper-container">
+									<p class="paper-content"> 
+										This work details the first performance characterization of data-oblivious programs. Data-oblivious programs have 
+										gained popularity due to their application in security but are often dismissed because of anticipated performance loss. We 
+										study mechanical data-oblivious transformations applied to twenty workloads from the VIP-Bench benchmark suite. Further, we 
+										show that the per-instruction performance is improved as a result of these transformations due to better branch and memory 
+										performance. While data-oblivious program execution often incurs overheads, the contributions of this work show that these 
+										overheads are often small. In the contrary cases, it is sometimes possible to overcome these overheads with compiler and algorithmic 
+										optimizations, bringing us closer to achieving efficient and widely-used data-oblivious programs.
+										
+									</p>
+								</div>
+								<br/>
+								<h3>Published</h3>
+								<p class="paper-title">SEED 2022 &nbsp;|&nbsp; Sequestered Encryption: A Hardware Technique for Comprehensive Data Privacy  &nbsp;|&nbsp; L. Biernacki, M. Zerihun Demissie, K. Birkayehu Workneh, F. Assamnew Andargie, T. Austin.</p>
+								<div class="paper-container">
+									<p class="paper-content"> 
+										Data breaches that penetrate web-facing servers and exfiltrate sensitive user data have 
+										become pervasive. Insulating these systems from attack is seemingly impossible due to the pervasiveness 
+										of software vulnerabilities within these cloud applications. In this work, we explore how trusted hardware
+										can be leveraged to provide data confidentiality in the presence of vulnerable software while achieving 
+										practical performance overheads. We present Sequestered Encryption (SE)—a hardware technique for data privacy 
+										that sequesters sensitive plaintext data into a small hardware root of trust and encrypts this data in all 
+										external microarchitectural structures, thereby rendering secret values inaccessible to software. 
+									</p>
+								</div>
+								<p class="paper-title">SEED 2021 &nbsp;|&nbsp; <a href="https://ieeexplore.ieee.org/document/9604804">VIP-Bench: A Benchmark Suite for Evaluating Privacy-Enhanced Computation Frameworks</a> &nbsp;|&nbsp; L. Biernacki, M. Zerihun Demissie, K. Birkayehu Workneh, G. Basha Namomsa,  P. Gebremedhin, F. Assamnew Andargie, B. Reagen, T. Austin.</p>
+								<div class="paper-container">
+									<p class="paper-content"> 
+										Privacy-enhanced computation enables the processing of encrypted data without exposing underlying 
+										sensitive information. Such technologies are extremely promising for the advancement of data privacy, 
+										as they remove plaintexts from the attackers&#39; reach. However, each privacy technology provides varying 
+										degrees of computational capabilities and performance overheads, creating challenges for adoption. We propose 
+										VIP-Bench, a benchmark suite designed with varying operational complexity and computational depth to evaluate 
+										competing privacy frameworks fairly and directly. VIP-Bench defines a forward-looking privacy-enhanced computation 
+										model and then develops under that model an array of privacy-focused benchmarks. The benchmark set is designed to 
+										flexibly cover the whole range of expected computational power and capability, enabling VIP-Bench to evaluate the 
+										privacy-enhanced computation capabilities of both today and tomorrow.
+									</p>
+								</div>
+								<br/> 
+								<h3>Workshop Posters</h3>
+								<p class="paper-title">WISE 2022 &nbsp;|&nbsp; <a href="https://docs.google.com/presentation/d/1Afb0hsmzrvfV8SgABZw3093p8dYAYBqBOuS3dh9THY4/edit?usp=sharing">Verifying Computation In Sequestered Encryption</a> &nbsp;&nbsp;|&nbsp;&nbsp; M. Zerihun Demissie, L. Biernacki, T. Austin. </p>
+								<span class="image main"><img src="images/POSTER - Verifiable Computation in SE.jpg" alt="POSTER - Verifiable Computation in SE" /></span>
+							</article>
+
+						<!-- About -->
+							<article style="width: 60vw; height: 95vh; padding-top:2.5rem ; overflow:hidden;" id="CV">
+								<h2 class="major">CV</h2>
+								<iframe style="display:block; width: 100%; height:89%; background-color: white;" src="https://tinyurl.com/mz-cv-resume"></iframe>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="https://getform.io/f/3057f8ea-2dfc-40d2-846b-cfcf167193a9" enctype="multipart/form-data">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" required />
+										</div>
+										<!-- add hidden Honeypot input to prevent spams -->
+    									<input type="hidden" name="_gotcha" style="display:none !important">
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" name="email" id="email" required />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4" required></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" id="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								
+								<ul class="icons">
+									<li><a href="https://twitter.com/MeronZDemissie" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.linkedin.com/in/meron-demissie-b0b089167" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.facebook.com/meron.demissie.39" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/MeronZerihun" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Elements -->
+							
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Last Updated: November 2022.</p>
+						<p class="copyright">&copy; 2022 Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/index.js"></script>
+
+	</body>
+</html>
