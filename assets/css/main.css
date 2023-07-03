@@ -696,7 +696,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 2.5rem 0;
+			margin: 1rem 0;
 			width: 100%;
 		}
 
@@ -1139,7 +1139,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.725), rgba(19, 21, 25, 0.725)), url("../../images/overlay.png");
 			background-size: auto,
  256px 256px;
 			background-position: center,
@@ -1659,18 +1659,76 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-.paper-title{
-	margin-top: 0.5rem; 
-	margin-bottom: 0.5rem;
+.paper-container{
+	margin-left: 2rem;
+	background-color: #192846;
+	box-shadow: 0 2px 4px 0 rgba(150, 150, 150, 0.2);
+	transition: 0.3s;
+	border-radius: 8px;
 }
 
-.paper-container{
-	border-left: 0.1rem solid white; 
-	margin-left: 2rem;
+.paper-title{
+	padding: 20px 0 20px 20px;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+	font-size: large; 
 }
+
+.poster-title{
+	font-weight: bold;
+	font-size: large; 
+}
+
+/* On mouse-over, add a deeper shadow */
+.paper-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(150, 150, 150, 0.2);
+}
+
 .paper-content{
+	margin: 10px;
 	margin-bottom: 0; 
-	padding: 0; 
-	padding-left: 0.5rem; 
+	padding: 10px; 
 	text-align: justify;
 }
+
+.summary{
+	font-size: 0.93em;
+}
+
+.summary-body{
+	margin: 10px;
+}
+
+.button {
+  background-color: #111c2e;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-table;
+  font-size: 14px;
+  margin: 2px 12px;
+}
+
+.button a{
+	text-decoration: none;
+	display: table-cell;
+	border: 0;
+}
+
+#learn-more-icons{
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.button-content{
+	margin-left: 10px; 
+	margin-right: 10px;
+}
+
+.button-text{
+	margin-left: 5px;
+}
+
