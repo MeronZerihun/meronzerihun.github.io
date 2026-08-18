@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Meron Zerihun Demissie | Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="logo"
+					style="background:url(images/profile.png); background-size: cover;">
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Meron Zerihun Demissie</h1>
+						<p>
+							Welcome! My name is Meron Zerihun Demissie and I am a Ph.D. student
+							<br />studying Computer Science and Engineering <br />at the University
+							of Michigan. I am advised by <a
+								href="https://www.linkedin.com/in/prof-todd-austin"
+								target="_blank">Prof. Todd Austin</a>. <br /> <br />
+							My research primarily focuses on studying <b>how to combat
+								vulnerabilities <br />in existing sensitive applications </b> and
+							designing <b>architectures <br />for efficient and tamper-proof
+								privacy-enhanced computing</b>.
+						</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#research">Research</a></li>
+						<li><a href="assets/files/CV.pdf">CV</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+				<article id="intro">
+					<h2 class="major">Intro</h2>
+					<p> Hello! My name is Meron Zerihun Demissie. I was born and raised in
+						Addis Ababa, Ethiopia, a country located at the Horn of Africa. Currently,
+						I am pursuing my Ph.D. in Computer Science and Engineering at the
+						University of Michigan. I am advised by Prof. Todd Austin. My research
+						focuses on identifying approaches to prevent vulnerabilities in existing
+						sensitive applications and designing computer systems for private and
+						verifiable computing.</p>
+					<p>I earned a Bachelor&#39;s degree in Software Engineering from Addis
+						Ababa University&#39;s Institute of Technology. During my undergraduate
+						studies, I participated in <a href target>AURA</a>, a research exchange
+						program, where I worked in a team on a project called <a
+							href="https://youtu.be/uqh3WBmSZ8I">Privacy Enhanced Computer
+							Architecture</a>, which continues to inspire my current scholarly
+						pursuit.</p>
+					<p>To learn more about my academic work and other activities, feel free to
+						explore this website and don&#39;t hesitate to <a
+							href="#contact">contact</a> me.</p>
+				</article>
+
+				<!-- Work -->
+				<article id="research">
+					<h2 class="major">Research</h2>
+
+					<!-- Going Beyond Encryption with Encrypted and Tamper-proof Computation -->
+					<div class="paper-container">
+						<h3 class="paper-title">Going Beyond Encryption with Encrypted and
+							Tamper-proof Computation | M. Zerihun Demissie, L. Biernacki, T.
+							Ramotsoela, T. Austin | On-going</h3>
+						<div class="paper-content">
+							<h4 class="summary">Summary</h4>
+							<p class="summary-body">
+								In this work, we design a practical, expressive, hardware-based secure
+								computation framework. Secure computation
+								is a specialized form of computation performed directly on encrypted
+								data without software needing a data access key.
+								The potential future existence of this form of computation would have a
+								huge impact in the world of security and privacy.
+								In the security arena, secure computation would create programs that are
+								not vulnerable to any existing forms of hacking,
+								because all a hacker could acquire from breaking into a secure
+								computation is always-encrypted sensitive data. In the privacy arena,
+								this form of computation could allow a system to process data that
+								software, programmers, or administrators could never see.
+								This hardware-based secure computation framework provides strong
+								confidentiality guarantees, since by design, the software
+								cannot see the data that it is processing. Currently, we are enhancing
+								our secure computation framework, Sequestered Encryption,
+								to verify the integrity of a computation so that clients know that the
+								processed results they receive is a
+								product of accurately performing the computation on the inputs they
+								originally specified.
+							</p>
+							<br />
+							<div id="learn-more-icons">
+								<!-- <div class="button">
+											<div class="button-content">
+												<a href="#"> 
+													<i class="fas fa-file-alt fa-lg"></i>
+													<span class="button-text">Paper</span> 
+												</a>
+											</div>
+										</div> -->
+								<div class="button">
+									<div class="button-content">
+										<a href="assets/files/Poster File - DAC 2023.pdf">
+											<i class="fas fa-desktop fa-lg"></i>
+											<span class="button-text">Poster</span>
+										</a>
+									</div>
+								</div>
+								<div class="button">
+									<div style="margin-left: 10px; margin-right: 10px;">
+										<a href="#contact">
+											<i class="fas fa-comments fa-lg"></i>
+											<span style="margin-left: 5px;">Let's chat</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br />
+
+					<!-- Leaky Operators in Languages -->
+					<div class="paper-container">
+						<h3 class="paper-title">LOL: Leaky Operators in Languages | M. Zerihun
+							Demissie, T. Austin | On-going</h3>
+						<div class="paper-content">
+							<h4 class="summary">Summary</h4>
+							<p class="summary-body">
+								Language-based vulnerabilities are weaknesses in software that arise
+								from how a language is semantically defined. C++ and many other
+								imperative languages
+								use semantics when defining certain operators for optimizing code and
+								avoiding exceptions. Some of these semantics, however, can
+								be exploited to leak sensitive (private) information. If such operators
+								are used to compute on private data within a program,
+								the instruction and memory trace can vary depending on the private data.
+								This behavior causes an observable side-channel
+								that can be used by an attacker to exfiltrate these sensitive data
+								values. In this work, we seek to identify real-world sensitive
+								applications
+								that suffer from language-based vulnerabilities and provide mitigation
+								that are reliable, easy to use, and portable to these applications.
+							</p>
+							<br />
+							<div id="learn-more-icons">
+								<!-- <div class="button">
+											<div class="button-content">
+												<a href="#"> 
+													<i class="fas fa-file-alt fa-lg"></i>
+													<span class="button-text">Paper</span> 
+												</a>
+											</div>
+										</div> -->
+								<!-- <div class="button">
+											<div class="button-content">
+												<a href="#"> 
+													<i class="fas fa-desktop fa-lg"></i>
+													<span class="button-text">Poster</span> 
+												</a>
+											</div> 
+										</div> -->
+								<div class="button">
+									<div class="button-content">
+										<a href="assets/files/Poster File - GREPSEC.pdf">
+											<i class="fas fa-desktop fa-lg"></i>
+											<span class="button-text">Poster</span>
+										</a>
+									</div>
+								</div>
+								<div class="button">
+									<div style="margin-left: 10px; margin-right: 10px;">
+										<a href="#">
+											<i class="fas fa-comments fa-lg"></i>
+											<span style="margin-left: 5px;">Let's chat</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br />
+
+					<!-- Exploring the Efficiency of Data Oblivious Programs -->
+					<div class="paper-container">
+						<h3 class="paper-title"><a href="https://ispass.org/ispass2023/">ISPASS
+								2023</a> | Exploring the Efficiency of Data Oblivious Programs
+							&nbsp;&nbsp;|&nbsp;&nbsp; L. Biernacki, B. Mengist Tiruye, M. Zerihun
+							Demissie, F. Assamnew Andargie, B. Reagen, T. Austin</h3>
+						<div class="paper-content">
+							<h4 class="summary">Summary</h4>
+							<p class="summary-body">
+								In this work, we present the first performance characterization of
+								data-oblivious programs. Data-oblivious programs have
+								gained popularity due to their application in security but are often
+								dismissed because of the anticipated performance loss. We
+								study mechanical data-oblivious transformations applied to twenty
+								workloads from the VIP-Bench benchmark suite. Furthermore, we
+								show that the per-instruction performance is improved as a result of
+								these transformations due to better branch and memory
+								performance. While data-oblivious program execution often incurs
+								overheads, the contributions of this work show that these
+								overheads are often small. In the contrary cases, it is sometimes
+								possible to overcome these overheads with compiler and algorithmic
+								optimizations, bringing us closer to achieving efficient and widely-used
+								data-oblivious programs.
+
+							</p>
+							<br />
+							<div id="learn-more-icons">
+								<div class="button">
+									<div class="button-content">
+										<a href="https://ieeexplore.ieee.org/document/10158185">
+											<i class="fas fa-file-alt fa-lg"></i>
+											<span class="button-text">Paper</span>
+										</a>
+									</div>
+								</div>
+								<!-- <div class="button">
+											<div class="button-content">
+												<a href=""> 
+													<i class="fas fa-desktop fa-lg"></i>
+													<span class="button-text">Poster</span> 
+												</a>
+											</div>
+										</div> -->
+								<div class="button">
+									<div style="margin-left: 10px; margin-right: 10px;">
+										<a href="#contact">
+											<i class="fas fa-comments fa-lg"></i>
+											<span style="margin-left: 5px;">Let's chat</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br />
+
+					<!-- Sequestered Encryption: A Hardware Technique for Comprehensive Data Privacy -->
+					<div class="paper-container">
+						<h3 class="paper-title"><a href="https://seed22.engr.uconn.edu">SEED
+								2022</a> &nbsp;|&nbsp; Sequestered Encryption: A Hardware Technique for
+							Comprehensive Data Privacy &nbsp;|&nbsp; L. Biernacki, M. Zerihun
+							Demissie, K. Birkayehu Workneh, F. Assamnew Andargie, T. Austin</h3>
+						<div class="paper-content">
+							<h4 class="summary">Summary</h4>
+							<p class="summary-body">
+								Data breaches that penetrate web-facing servers and exfiltrate sensitive
+								user data have
+								become pervasive. Insulating these systems from attack is seemingly
+								impossible due to the pervasiveness
+								of software vulnerabilities within these cloud applications. In this
+								work, we explore how trusted hardware
+								can be leveraged to provide data confidentiality while achieving
+								practical performance overheads. We present
+								Sequestered Encryption (SE)—a hardware technique for data privacy that
+								sequesters sensitive plaintext data
+								into a small hardware root of trust and encrypts this data in all
+								external microarchitectural structures,
+								thereby rendering secret values inaccessible to software.
+
+							</p>
+							<br />
+							<div id="learn-more-icons">
+								<div class="button">
+									<div class="button-content">
+										<a href="https://ieeexplore.ieee.org/document/9935044">
+											<i class="fas fa-file-alt fa-lg"></i>
+											<span class="button-text">Paper</span>
+										</a>
+									</div>
+								</div>
+								<!-- <div class="button">
+											<div class="button-content">
+												<a href=""> 
+													<i class="fas fa-desktop fa-lg"></i>
+													<span class="button-text">Poster</span> 
+												</a>
+											</div>
+										</div> -->
+								<div class="button">
+									<div style="margin-left: 10px; margin-right: 10px;">
+										<a href="#contact">
+											<i class="fas fa-comments fa-lg"></i>
+											<span style="margin-left: 5px;">Let's chat</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br />
+
+					<!-- VIP-Bench -->
+					<div class="paper-container">
+						<h3 class="paper-title"><a
+								href="https://www.seed-symposium.org/2021/index.html">SEED 2021</a>
+							&nbsp;|&nbsp; SEED 2021 &nbsp;|&nbsp; VIP-Bench: A Benchmark Suite for
+							Evaluating Privacy-Enhanced Computation Frameworks &nbsp;|&nbsp; L.
+							Biernacki, M. Zerihun Demissie, K. Birkayehu Workneh, G. Basha Namomsa,
+							P. Gebremedhin, F. Assamnew Andargie, B. Reagen, T. Austin</h3>
+						<div class="paper-content">
+							<h4 class="summary">Summary</h4>
+							<p class="summary-body">
+								Privacy-enhanced computation enables the processing of encrypted data
+								without exposing underlying
+								sensitive information. Such technologies are extremely promising for the
+								advancement of data privacy,
+								as they remove plaintexts from the attackers&#39; reach. However, each
+								privacy technology provides varying
+								degrees of computational capabilities and performance overheads,
+								creating challenges for adoption. We propose
+								VIP-Bench, a benchmark suite designed with varying operational
+								complexity and computational depth to evaluate
+								competing privacy frameworks fairly and directly. VIP-Bench defines a
+								forward-looking privacy-enhanced computation
+								model and then develops under that model an array of privacy-focused
+								benchmarks. The benchmark set is designed to
+								flexibly cover the whole range of expected computational power and
+								capability, enabling VIP-Bench to evaluate the
+								privacy-enhanced computation capabilities of both today and tomorrow.
+
+							</p>
+							<br />
+							<div id="learn-more-icons">
+								<div class="button">
+									<div class="button-content">
+										<a href="https://ieeexplore.ieee.org/document/9604804">
+											<i class="fas fa-file-alt fa-lg"></i>
+											<span class="button-text">Paper</span>
+										</a>
+									</div>
+								</div>
+								<!-- <div class="button">
+											<div class="button-content">
+												<a href=""> 
+													<i class="fas fa-desktop fa-lg"></i>
+													<span class="button-text">Poster</span> 
+												</a>
+											</div>
+										</div> -->
+								<div class="button">
+									<div style="margin-left: 10px; margin-right: 10px;">
+										<a href="#contact">
+											<i class="fas fa-comments fa-lg"></i>
+											<span style="margin-left: 5px;">Let's chat</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br /><br />
+
+					<h2 class="major">Workshop Posters</h2>
+					<p class="poster-title">DAC 2023 &nbsp;|&nbsp; <a
+							href="assets/files/Poster File - DAC 2023.pdf">Going Beyond Hacking with
+							Encrypted and Tamper-proof Computation</a> &nbsp;&nbsp;|&nbsp;&nbsp; M.
+						Zerihun Demissie, L. Biernacki, T. Ramotsoela, T. Austin. </p>
+					<span class="image main"><img src="images/Poster - DAC 2023.jpg"
+							alt="Poster - Going Beyond Hacking with Encrypted and Tamper-proof Computation" /></span>
+					<br />
+					<p class="poster-title">WISE 2022 &nbsp;|&nbsp; <a
+							href="assets/files/Poster File - WISE 2022.pdf">Verifying Computation In
+							Sequestered Encryption</a> &nbsp;&nbsp;|&nbsp;&nbsp; M. Zerihun Demissie,
+						L. Biernacki, T. Austin. </p>
+					<span class="image main"><img src="images/Poster - WISE 2022.jpg"
+							alt="Poster - Verifiable Computation in SE" /></span>
+				</article>
+
+				<!-- Contact -->
+				<article id="contact">
+					<h2 class="major">Contact</h2>
+					<form method="post"
+						action="https://getform.io/f/3057f8ea-2dfc-40d2-846b-cfcf167193a9"
+						enctype="multipart/form-data">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" required />
+							</div>
+							<!-- add hidden Honeypot input to prevent spams -->
+							<input type="hidden" name="_gotcha" style="display:none !important">
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" required />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="4" required></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" id="reset" value="Reset" /></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="https://twitter.com/MeronZDemissie"
+								class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/in/meron-demissie-b0b089167"
+								class="icon brands fa-linkedin"><span
+									class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.facebook.com/meron.demissie.39"
+								class="icon brands fa-facebook-f"><span
+									class="label">Facebook</span></a></li>
+						<li><a href="https://github.com/MeronZerihun"
+								class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</article>
+
+				<!-- Elements -->
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">Last Updated: November 2022.</p>
+				<p class="copyright">&copy; 2022 Design: <a href="https://html5up.net">HTML5
+						UP</a>.</p>
+			</footer>
+
+		</div>
+
+		<!-- BG -->
+		<div id="bg"></div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/index.js"></script>
+
+	</body>
+</html>
