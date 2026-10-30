@@ -1,77 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Under Construction</title>
-        <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meron Zerihun Demissie</title>
+  <meta name="description" content="Meron Zerihun Demissie, PhD student in Computer Science and Engineering at the University of Michigan. Computer architecture for reliable and trustworthy computing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    /* Soft fall palette: cream paper, warm browns, rust and amber accents (always light) */
+    :root {
+      color-scheme: light;
+      --bg: #fbf6ee;
+      --card: #fffbf5;
+      --text: #2e2520;
+      --muted: #7a6858;
+      --rule: #ecdfcc;
+      --accent: #a5481e;
+      --accent-soft: #f6e4d2;
+      --amber: #e2a04a;
+      --plum: #8c4a5a;
+      --serif: "Source Serif 4", Georgia, serif;
     }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 1.5rem;
+      margin: 0;
+      border-top: 5px solid transparent;
+      border-image: linear-gradient(90deg, var(--amber), var(--accent), var(--plum)) 1;
+      background: var(--bg);
+      color: var(--text);
+      font: 15.5px/1.65 "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 2px; }
+    strong { font-weight: 600; }
+
+    /* Layout: sticky profile on the left, content on the right */
+    .page {
+      max-width: 1040px; margin: 0 auto; padding: 64px 28px 48px;
+      display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 72px;
+    }
+    aside { position: sticky; top: 48px; align-self: start; }
+    aside img {
+      width: 156px; height: 156px; display: block;
+      border-radius: 50%; object-fit: cover; object-position: 50% 15%;
+      background: radial-gradient(circle at 50% 35%, #fbe6cf, #efc49a);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--rule), 0 8px 22px rgba(165, 72, 30, 0.12);
+      margin-bottom: 22px;
+    }
+    .name { font-family: var(--serif); font-weight: 600; font-size: 1.65rem; line-height: 1.2; margin: 0 0 6px; }
+    .role { color: var(--muted); margin: 0 0 16px; font-size: 0.9rem; line-height: 1.5; }
+    .links { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .links a {
+      display: inline-block; padding: 3px 12px; border-radius: 999px;
+      background: var(--accent-soft); font-size: 0.84rem; font-weight: 500;
+      transition: background 0.15s;
+    }
+    .links a:hover { text-decoration: none; background: #f1d6bd; }
+    .callout {
+      margin: 20px 0 0; padding: 11px 13px; border-radius: 10px;
+      background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--amber);
+      font-size: 0.82rem; line-height: 1.5; color: var(--muted);
+    }
+    .callout strong { color: var(--text); }
+
+    /* Sections and headings */
+    main { min-width: 0; }
+    section + section { margin-top: 44px; }
+    h2 {
+      font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.2;
+      margin: 0 0 16px; display: flex; align-items: center; gap: 14px;
+    }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+    p { margin: 0 0 12px; }
+    .lead { font-size: 1.05rem; }
+
+    /* News: a soft timeline */
+    .news { list-style: none; margin: 0; padding: 0; position: relative; }
+    .news::before {
+      content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px;
+      width: 2px; background: var(--rule); border-radius: 2px;
+    }
+    .news li { position: relative; padding: 0 0 14px 30px; }
+    .news li:last-child { padding-bottom: 0; }
+    .news li::before {
+      content: ""; position: absolute; left: 0; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--amber);
+    }
+    .news li:first-child::before { background: var(--amber); }
+    .news time {
+      display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1px;
+    }
+    .news span { display: block; }
+    details.older { margin-top: 14px; }
+    details.older .news { margin-top: 14px; }
+    details.older summary {
+      display: inline-block; cursor: pointer; list-style: none;
+      font-size: 0.82rem; font-weight: 500; color: var(--muted);
+      padding: 3px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--card);
+    }
+    details.older summary:hover { color: var(--accent); }
+    details.older summary::-webkit-details-marker { display: none; }
+    details.older summary::after { content: " ↓"; }
+    details.older[open] summary::after { content: " ↑"; }
+
+    /* Research cards */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .card {
-      max-width: 480px;
-      width: 100%;
+      background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px;
     }
-    .badge {
-      display: inline-block;
-      background-color: #38bdf8;
-      color: #0f172a;
-      font-weight: 700;
-      font-size: 0.75rem;
-      padding: 0.35rem 0.85rem;
-      border-radius: 9999px;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .card h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; margin: 0 0 6px; line-height: 1.3; }
+    .card p { font-size: 0.92rem; margin: 0; color: #4a3f37; }
+    .tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent); background: var(--accent-soft);
+      padding: 1px 9px; border-radius: 999px; margin-bottom: 10px;
     }
-    h1 {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      line-height: 1.2;
+    .tag.past { color: var(--muted); background: #f1eae0; }
+
+    /* Publications */
+    .pubs { list-style: none; margin: 0; padding: 0; }
+    .pubs li { padding: 10px 0; border-bottom: 1px dashed var(--rule); }
+    .pubs li:first-child { padding-top: 0; }
+    .pubs li:last-child { border-bottom: 0; }
+    .venue {
+      display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+      color: var(--accent); background: var(--accent-soft); padding: 0 8px; border-radius: 6px;
+      margin-right: 6px; vertical-align: 1px;
     }
-    p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+    .venue.pending { color: var(--muted); background: #f1eae0; }
+    .pub-title { font-weight: 500; line-height: 1.45; }
+    .authors { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+    .me { font-weight: 600; color: var(--text); }
+    .posters { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+
+    /* Experience and service */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    .items { list-style: none; margin: 0; padding: 0; }
+    .items li { margin-bottom: 12px; line-height: 1.45; }
+    .items .what { font-weight: 500; }
+    .items .detail { display: block; color: var(--muted); font-size: 0.85rem; }
+
+    footer {
+      margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule);
+      color: var(--muted); font-size: 0.8rem; display: flex; align-items: center; gap: 8px;
     }
-    .contact {
-      font-size: 0.9rem;
-      color: #64748b;
+
+
+    /* Tabs: Research / Publications / Experience share one panel (all sections show if JS is off) */
+    .tabs { margin-top: 44px; }
+    .tab-bar { display: none; }
+    .tabs.js .tab-bar {
+      display: flex; flex-wrap: wrap; gap: 0 26px; margin-bottom: 22px; border-bottom: 1px solid var(--rule);
     }
-    .contact a {
-      color: #38bdf8;
-      text-decoration: none;
+    .tab-bar button {
+      font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--muted);
+      background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+      padding: 4px 0 9px; cursor: pointer;
     }
-    .contact a:hover {
-      text-decoration: underline;
+    .tab-bar button:hover { color: var(--text); }
+    .tab-bar button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+    .tabs.js .panel { margin-top: 0; }
+    .tabs.js .panel > h2 { display: none; }
+    .tabs.js .two-col h2 { font-size: 1.05rem; }
+
+    @media (max-width: 840px) {
+      .page { grid-template-columns: 1fr; gap: 36px; padding-top: 40px; }
+      aside { position: static; display: grid; grid-template-columns: 112px 1fr; gap: 0 22px; align-items: center; }
+      aside img { width: 112px; height: 112px; margin: 0; }
+      .callout { grid-column: 1 / -1; }
+    }
+    @media (max-width: 600px) {
+      .page { padding: 32px 18px 36px; }
+      .cards, .two-col { grid-template-columns: 1fr; }
+      .two-col { gap: 32px; }
+      aside { display: block; }
+      aside img { margin-bottom: 16px; }
     }
   </style>
-    </head>
-    <body>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <img src="images/profile.png" alt="Photo of Meron Zerihun Demissie">
+    <div>
+      <div class="name">Meron Zerihun Demissie</div>
+      <p class="role">PhD student, Computer Science and Engineering<br>University of Michigan</p>
+      <ul class="links">
+        <li><a href="mailto:mdemissi@umich.edu">Email</a></li>
+        <li><a href="assets/files/CV.pdf">CV</a></li>
+        <li><a href="https://scholar.google.com/citations?user=zsXJdUEAAAAJ&amp;hl=en">Scholar</a></li>
+        <li><a href="https://github.com/MeronZerihun">GitHub</a></li>
+      </ul>
+    </div>
+    <p class="callout">Looking for a <strong>Summer 2027</strong> research internship in GPU architecture or reliability.</p>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <p class="lead">
+        Hi! I'm <strong>Meron Zerihun Demissie</strong>, a PhD student in Computer Science and Engineering
+        at the University of Michigan, advised by
+        <a href="https://web.eecs.umich.edu/~rdreslin/">Prof. Ronald Dreslinski</a>.
+      </p>
+      <p>
+        I work in computer architecture, on <strong>hardware for reliable and trustworthy computing</strong>.
+        Right now I study how GPUs can protect the memory that large-scale AI training depends on.
+        I grew up in Addis Ababa, Ethiopia, and earned my B.Sc. in Software Engineering from the Addis Ababa
+        Institute of Technology. I'm always happy to chat about research:
+        <a href="mailto:mdemissi@umich.edu">mdemissi@umich.edu</a>.
+      </p>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <!-- Newest first. To add an item, copy one <li> to the top and edit its date and text. -->
+      <ul class="news">
+        <li><time>Aug 2025</time><span>Our paper on <strong>HEIR</strong>, a universal compiler for homomorphic encryption, is now on arXiv.</span></li>
+        <li><time>Aug 2025</time><span>Joined the CSE Graduate Committee (CSEG) board as <strong>Service Co-chair</strong>.</span></li>
+        <li><time>Aug 2024</time><span>Back as a Graduate Student Instructor for <strong>EECS 370</strong>: Introduction to Computer Organization.</span></li>
+        <li><time>May 2024</time><span>Started a graduate technical internship at <strong>Intel</strong>, working on the HEIR compiler.</span></li>
+      </ul>
+      <details class="older">
+        <summary>Older news</summary>
+        <ul class="news">
+          <li><time>2024</time><span>🎉 Received the <strong>CSE DEI Service Award</strong>.</span></li>
+          <li><time>Aug 2023</time><span>Graduate Student Instructor for <strong>EECS 573</strong>: Advanced Topics in Computer Architecture.</span></li>
+          <li><time>2023</time><span>Our paper <em>Exploring the Efficiency of Data-Oblivious Programs</em> appeared at <strong>ISPASS 2023</strong>.</span></li>
+        </ul>
+      </details>
+    </section>
+
+    <div class="tabs">
+      <div class="tab-bar" role="tablist">
+        <button role="tab" data-tab="research">Research</button>
+        <button role="tab" data-tab="publications">Publications</button>
+        <button role="tab" data-tab="experience">Experience &amp; Service</button>
+      </div>
+
+    <section id="research" class="panel" role="tabpanel">
+      <h2>Research</h2>
+      <div class="cards">
         <div class="card">
-            <span class="badge">Coming Soon</span>
-            <h1>Under Construction</h1>
-            <p>We're currently working on something new. Check back soon for
-                updates!</p>
-            <div class="contact">
-                Questions? Reach out at <a
-                    href="mailto:mdemissi@umich.edu">mdemissi@umich.edu</a>
-            </div>
+          <span class="tag">Current</span>
+          <h3>Reliable memory for AI training</h3>
+          <p>
+            Large-scale AI training keeps a lot of state in GPU memory, and memory errors are a common
+            reason training jobs stop. I study which corruptions of that state actually harm a model, and
+            how hardware can use what it knows about the workload to protect training more efficiently.
+          </p>
         </div>
-    </body>
+        <div class="card">
+          <span class="tag past">Earlier</span>
+          <h3>Hardware for privacy and integrity</h3>
+          <p>
+            Hardware that lets the cloud compute on sensitive data without exposing it, and that gives
+            users verifiable evidence that a remote computation ran correctly, including safe, selective
+            disclosure of results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="panel" role="tabpanel">
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title"><span class="venue pending">In submission</span>Dash: A Hardware Approach for Safe Data Disclosures</div>
+          <div class="authors"><span class="me">M. Zerihun Demissie</span>, L. Biernacki, D. Ramotsoela, P. Grubbs, T. Austin</div>
+        </li>
+        <li>
+          <div class="pub-title"><span class="venue">arXiv 2025</span>HEIR: A Universal Compiler for Homomorphic Encryption</div>
+          <div class="authors">A. Ali, J. Choi, B. Gipson, S. Gorantala, J. Kun, W. Legiest, L. Lim, A. Viand,
+            <span class="me">M. Zerihun Demissie</span>, H. Zheng</div>
+        </li>
+        <li>
+          <div class="pub-title"><span class="venue">ISPASS 2023</span>Exploring the Efficiency of Data-Oblivious Programs</div>
+          <div class="authors">L. Biernacki, B. Mengist Tiruye, <span class="me">M. Zerihun Demissie</span>,
+            F. Assamnew Andargie, B. Reagen, T. Austin</div>
+        </li>
+        <li>
+          <div class="pub-title"><span class="venue">SEED 2022</span>Sequestered Encryption: A Hardware Technique for Comprehensive Data Privacy</div>
+          <div class="authors">L. Biernacki, <span class="me">M. Zerihun Demissie</span>, K. Birkayehu Workneh,
+            F. Assamnew Andargie, T. Austin</div>
+        </li>
+        <li>
+          <div class="pub-title"><span class="venue">SEED 2021</span>VIP-Bench: A Benchmark Suite for Evaluating Privacy-Enhanced Computation Frameworks</div>
+          <div class="authors">L. Biernacki, <span class="me">M. Zerihun Demissie</span>, K. Birkayehu Workneh,
+            G. Basha Namomsa, P. Gebremedhin, F. Assamnew Andargie, B. Reagen, T. Austin</div>
+        </li>
+      </ul>
+      <div class="posters">
+        Posters:
+        <a href="assets/files/Poster%20File%20-%20DAC%202023.pdf">DAC 2023</a> ·
+        <a href="assets/files/Poster%20File%20-%20GREPSEC.pdf">GREPSEC</a> ·
+        <a href="assets/files/Poster%20File%20-%20WISE%202022.pdf">WISE 2022</a>
+      </div>
+    </section>
+
+    <section id="experience" class="panel" role="tabpanel">
+      <div class="two-col">
+        <div id="teaching">
+          <h2>Experience</h2>
+          <ul class="items">
+            <li><span class="what">Graduate Technical Intern, Intel</span>
+              <span class="detail">Summer 2024 · HEIR, an MLIR compiler for homomorphic encryption</span></li>
+            <li><span class="what">Graduate Student Instructor</span>
+              <span class="detail">EECS 370 (Computer Organization) · EECS 573 (Advanced Computer Architecture)</span></li>
+          </ul>
+        </div>
+        <div id="service">
+          <h2>Service</h2>
+          <ul class="items">
+            <li><span class="what">CSE Graduate Committee (CSEG)</span>
+              <span class="detail">Service Chair · community and service events for graduate students</span></li>
+            <li><span class="what">Founder, VoiCSEs</span>
+              <span class="detail">Peer support for skill development and community</span></li>
+            <li><span class="what">Research mentor, UMAPS and AURA</span>
+              <span class="detail">Visiting scholars and undergraduate researchers</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <footer>
+      Last updated October 2026
+    </footer>
+
+  </main>
+</div>
+<script>
+  // Show one tab at a time; the URL hash (#publications, ...) opens a tab directly.
+  (function () {
+    var tabs = document.querySelector('.tabs');
+    if (!tabs) return;
+    tabs.classList.add('js');
+    var buttons = tabs.querySelectorAll('.tab-bar button');
+    var panels = tabs.querySelectorAll('.panel');
+    function show(id) {
+      buttons.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.tab === id); });
+      panels.forEach(function (p) { p.hidden = p.id !== id; });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        show(b.dataset.tab);
+        history.replaceState(null, '', '#' + b.dataset.tab);
+      });
+    });
+    var h = location.hash.slice(1);
+    show(Array.prototype.some.call(panels, function (p) { return p.id === h; }) ? h : panels[0].id);
+  })();
+</script>
+</body>
 </html>
